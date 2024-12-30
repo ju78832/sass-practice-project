@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "User not found" }, { status: 404 });
   }
 
-  if (!user.isSubscribed && user.todos.length >= 3) {
+  if (!user.isSubscribed && user.todos.length >= 11) {
     return NextResponse.json(
       {
         error:
